@@ -12,7 +12,9 @@ phases:
       commands:
         - echo Build completed on `date`
         - mvn package
+        - mv target/servlet-mock-1.0-SNAPSHOT.war ROOT.war
 artifacts:
   files:
-    - target/*.war
+    - ROOT.war
+#    - target/*.war
   discard-paths: yes
